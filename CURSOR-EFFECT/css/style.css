@@ -1,0 +1,46 @@
+
+/* Developed by: Nicolás Cabrera Rodríguez */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  cursor: none;
+}
+
+#cursor{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  transition: 0.1s;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+h2:hover ~ #cursor{
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #000;
+  animation: giro 5s linear infinite;
+}
+
+
+@keyframes giro{
+  0%{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+  
